@@ -1,19 +1,278 @@
-*{
+* {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box; /* Criterion 4A: box-sizing */
 }
 
-body{
+body {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     background-color: #f4f7f6;
     padding: 40px 20px;
 }
 
-.courses{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+.courses {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Course Card Box Model Requirements */
+.course-card {
+    width: 320px;            /* Criterion 4A: Width */
+    min-height: 480px;       /* Criterion 4A: Min-height */
+    background-color: #fff;  /* Criterion 4A: Appropriate background */
+    border: 1px solid #ccc;  /* Criterion 4A: Visible border */
+    border-radius: 8px;      /* Criterion 4A: Rounded corners */
+    margin: 10px;            /* Criterion 4A: Spacing between cards */
+    overflow: hidden;
+}
+
+/* Hover effect with Outline */
+.course-card:hover {
+    outline: 2px solid #007bff;
+    outline-offset: 2px;
+    transition: 0.3s ease;
+}
+
+/* Course Header Requirements (Criterion 4B) */
+.card-header {
+    display: flex;
+    justify-content: space-between; /* Keeps code and credit visually separated */
+    align-items: center;
+    padding: 12px 16px;             /* Header padding */
+    background-color: #e6f0ff;
+    border-bottom: 2px solid #b3d7ff;/* Bottom border separating header from content */
+}
+
+.course-code {
+    font-weight: bold;
+    color: #0056b3;
+    font-size: 14px;
+}
+
+.course-credits {
+    font-size: 12px;
+    color: #0056b3;
+    background-color: #ffffff;
+    padding: 2px 8px;
+    border-radius: 12px;
+}
+
+.course-img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Course Content Requirements (Criterion 4C) */
+.course-content {
+    padding: 16px; /* Content Padding */
+}
+
+.course-title {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 8px; /* Margin spacing */
+}
+
+.course-description {
+    font-size: 14px;
+    color: #666;
+    height: 45px;       /* Height constraint */
+    overflow: hidden;
+    margin-bottom: 12px;/* Margin spacing */
+}
+
+.course-details {
+    background-color: #f8f9fa;
+    padding: 10px;      /* Padding spacing */
+    border-radius: 6px;
+    font-size: 13px;
+    color: #444;
+    margin-bottom: 15px;/* Margin spacing */
+}
+
+.course-details p {
+    margin-bottom: 4px;
+}
+
+.course-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 10px;
+    border-top: 1px solid #eee;
+}
+
+.course-price {
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.course-btn {
+    text-decoration: none;
+    background-color: #007bff;
+    color: white;
+    padding: 8px 14px;  /* Button Padding */
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.course-btn:hover {
+    background-color: #0056b3;
+}
+
+
+/* experiment container */
+.experiment-container{
+    margin-top: 50px;
+    text-align: center;
+}
+
+.experiment-container h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.box-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: #e2e8f0; /* Light background to visually highlight margins */
+    padding: 20px;
+}
+
+/* Base Box requirements (Width: 250px, Height: 100px, Border: 5px) */
+.box {
+    width: 250px;
+    height: 100px;
+    border: 5px solid #2b6cb0;
+    background-color: #ebf8ff;
+    font-weight: bold;
+    color: #2b6cb0;
+}
+
+/* Box 1: Padding 20px, Margin 20px */
+.box-1 {
+    padding: 20px;
+    margin: 20px;
+}
+
+/* Box 2: Padding 40px, Margin 10px */
+.box-2 {
+    padding: 40px;
+    margin: 10px;
+}
+
+/* Box 3: Padding 10px, Margin 40px */
+.box-3 {
+    padding: 10px;
+    margin: 40px;
+}
+
+
+
+
+/* Base container for box-sizing demo */
+.box-sizing-container {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.sizing-wrapper {
+    display: flex;
+    justify-content: center;
     gap: 30px;
-    max-width: 1200px;
-    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Base box setup */
+.size-box {
+    width: 300px;
+    padding: 20px;
+    border: 5px solid #2b6cb0;
+    background-color: #ebf8ff;
+    font-weight: bold;
+}
+
+/* Case 1: content-box */
+.content-box-demo {
+    box-sizing: content-box;
+}
+
+/* Case 2: border-box */
+.border-box-demo {
+    box-sizing: border-box;
+}
+
+/* Overflow Demonstration Container */
+.overflow-container {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.overflow-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    padding: 20px;
+}
+
+.overflow-card {
+    width: 220px;
+}
+
+.overflow-card h3 {
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* Fixed height box to force overflow */
+.overflow-box {
+    height: 80px;
+    width: 100%;
+    border: 2px solid #2b6cb0;
+    background-color: #ffffff;
+    padding: 10px;
+    font-size: 13px;
+    line-height: 1.4;
+    text-align: left;
+}
+
+/* 1. overflow: visible */
+.overflow-visible {
+    overflow: visible;
+}
+
+/* 2. overflow: hidden */
+.overflow-hidden {
+    overflow: hidden;
+}
+
+/* 3. overflow: auto */
+.overflow-auto {
+    overflow: auto;
+}
+
+
+
+/* Section 8: Border vs Outline styling on Card 1 */
+.courses .course-card:first-child {
+    border: 3px solid #0056b3;     /* Solid Border */
+    outline: 3px dashed #e53e3e;   /* Dashed Outline */
+    outline-offset: 4px;
+}
+
+
+/* Task 9: Debugging Task Analysis */
+.card {
+    box-sizing: border-box; /* Fix: Constrains rendered width strictly to 300px */
+    width: 300px;
+    padding: 40px;
+    border: 5px solid;
+    margin: 20px;
 }

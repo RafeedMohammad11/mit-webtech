@@ -4,57 +4,126 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <section class="courses">
-        <article class="course-card">
-            <div>
-                <img src="https://picsum.photos" alt="no image">
-                <div class="course-content">
-                    <span class="course-tag">ASP.NET Core</span>
-                    <h2 class="course-title">Complete ASP.NET Core Bootcamp</h2>
-                    <p class="course-description">Learn C#, LINQ, REST APIs, ASP.NET Core, MVC</p>
-                    <div class="course-footer">
-                        <span class="course price">BDT. 10000</span>
-                        <a href="#" class="course-btn">Enroll Now</a>
-                    </div>
-                </div>
+    <!-- Card 1 -->
+    <article class="course-card">
+        <div class="card-header">
+            <span class="course-code">CSE-301</span>
+            <span class="course-credits">3.0 Credits</span>
+        </div>
+        <img class="course-img" src="https://picsum.photos/300/160?random=1" alt="Course Thumbnail">
+        <div class="course-content">
+            <h2 class="course-title">ASP.NET Core Development</h2>
+            <p class="course-description">Learn C#, LINQ, REST APIs, and MVC pattern to build enterprise applications.</p>
+            
+            <div class="course-details">
+                <p><strong>Section:</strong> 01</p>
+                <p><strong>Available Seats:</strong> 12</p>
             </div>
 
-        </article>
+            <div class="course-footer">
+                <span class="course-price">BDT 10,000</span>
+                <a href="#" class="course-btn">Register Now</a>
+            </div>
+        </div>
+    </article>
 
-        <article class="course-card">
-            <div>
-                <img src="https://picsum.photos" alt="no image">
-                <div class="course-content">
-                    <span class="course-tag">ASP.NET Core</span>
-                    <h2 class="course-title">Complete ASP.NET Core Bootcamp</h2>
-                    <p class="course-description">Learn C#, LINQ, REST APIs, ASP.NET Core, MVC</p>
-                    <div class="course-footer">
-                        <span class="course price">BDT. 10000</span>
-                        <a href="#" class="course-btn">Enroll Now</a>
-                    </div>
-                </div>
+    <!-- Card 2 -->
+    <article class="course-card">
+        <div class="card-header">
+            <span class="course-code">CSE-102</span>
+            <span class="course-credits">4.0 Credits</span>
+        </div>
+        <img class="course-img" src="https://picsum.photos/300/160?random=2" alt="Course Thumbnail">
+        <div class="course-content">
+            <h2 class="course-title">Database Systems & SQL</h2>
+            <p class="course-description">Master relational database design, normalization, indexing, and complex SQL queries.</p>
+            
+            <div class="course-details">
+                <p><strong>Section:</strong> 02</p>
+                <p><strong>Available Seats:</strong> 5</p>
             </div>
 
-        </article>
+            <div class="course-footer">
+                <span class="course-price">BDT 8,500</span>
+                <a href="#" class="course-btn">Register Now</a>
+            </div>
+        </div>
+    </article>
 
-        <article class="course-card">
-            <div>
-                <img src="https://picsum.photos" alt="no image">
-                <div class="course-content">
-                    <span class="course-tag">ASP.NET Core</span>
-                    <h2 class="course-title">Complete ASP.NET Core Bootcamp</h2>
-                    <p class="course-description">Learn C#, LINQ, REST APIs, ASP.NET Core, MVC</p>
-                    <div class="course-footer">
-                        <span class="course price">BDT. 10000</span>
-                        <a href="#" class="course-btn">Enroll Now</a>
-                    </div>
-                </div>
+    <!-- Card 3 -->
+    <article class="course-card">
+        <div class="card-header">
+            <span class="course-code">CSE-405</span>
+            <span class="course-credits">3.0 Credits</span>
+        </div>
+        <img class="course-img" src="https://picsum.photos/300/160?random=3" alt="Course Thumbnail">
+        <div class="course-content">
+            <h2 class="course-title">Web Security Fundamentals</h2>
+            <p class="course-description">Understand authentication, authorization, CORS, XSS mitigation, and HTTPS protocols.</p>
+            
+            <div class="course-details">
+                <p><strong>Section:</strong> 01</p>
+                <p><strong>Available Seats:</strong> 8</p>
             </div>
 
-        </article>
+            <div class="course-footer">
+                <span class="course-price">BDT 12,000</span>
+                <a href="#" class="course-btn">Register Now</a>
+            </div>
+        </div>
+    </article>
+</section>
 
-    </section>
+<section class="experiment-container">
+    <h2>Margin & Padding Experiment</h2>
+    <div class="box-wrapper">
+        <div class="box box-1">Box 1</div>
+        <div class="box box-2">Box 2</div>
+        <div class="box box-3">Box 3</div>
+    </div>
+</section>
+
+
+<section class="box-sizing-container">
+    <h2>Box-Sizing Comparison</h2>
+    <div class="sizing-wrapper">
+        <div class="size-box content-box-demo">Content-Box</div>
+        <div class="size-box border-box-demo">Border-Box</div>
+    </div>
+</section>
+
+
+<section class="overflow-container">
+    <h2>7. Overflow Demonstration</h2>
+    <div class="overflow-wrapper">
+        <div class="overflow-card">
+            <h3>overflow: visible</h3>
+            <div class="overflow-box overflow-visible">
+                This course description contains a lot of extra detailed text that intentionally exceeds the fixed height of 80px to demonstrate how overflow behaves.
+            </div>
+        </div>
+
+        <div class="overflow-card">
+            <h3>overflow: hidden</h3>
+            <div class="overflow-box overflow-hidden">
+                This course description contains a lot of extra detailed text that intentionally exceeds the fixed height of 80px to demonstrate how overflow behaves.
+            </div>
+        </div>
+
+        <div class="overflow-card">
+            <h3>overflow: auto</h3>
+            <div class="overflow-box overflow-auto">
+                This course description contains a lot of extra detailed text that intentionally exceeds the fixed height of 80px to demonstrate how overflow behaves.
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
 </body>
 </html>
